@@ -29,6 +29,9 @@ modules:
       - --enable-libmp3lame
       - --enable-libvorbis
       - --enable-libopus
+      - --enable-openssl
+      - --enable-nonfree
+
     sources:
       - type: archive
         url: https://ffmpeg.org/releases/ffmpeg-4.4.5.tar.xz
