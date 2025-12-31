@@ -1,9 +1,9 @@
 app-id: io.github.mfat.tvhplayer
 runtime: org.kde.Platform
-runtime-version: '5.15-24.08'
+runtime-version: 5.15-24.08
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '5.15-24.08'
+base-version: 5.15-24.08
 command: tvhplayer
 separate-locales: false
 cleanup-commands:
@@ -73,14 +73,14 @@ modules:
       - /app/lib/vlc/vlc-cache-gen /app/lib/vlc/plugins
     sources:
       - type: archive
-        url: https://get.videolan.org/vlc/3.0.21/vlc-3.0.21.tar.xz
-        sha256: 24dbbe1d7dfaeea0994d5def0bbde200177347136dbfe573f5b6a4cee25afbb0
+        url: https://get.videolan.org/vlc/3.0.23/vlc-3.0.23.tar.xz
+        sha256: e891cae6aa3ccda69bf94173d5105cbc55c7a7d9b1d21b9b21666e69eff3e7e0
         x-checker-data:
           type: anitya
           project-id: 6504
           stable-only: true
           url-template: https://get.videolan.org/vlc/$version/vlc-$version.tar.xz
-      
+
 
 
   - pypi-dependencies.yaml # Generated file from flatpak-pip-generator
@@ -97,7 +97,7 @@ modules:
       - install -D -m644 io.github.mfat.tvhplayer.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: "https://github.com/mfat/tvhplayer.git"
+        url: https://github.com/mfat/tvhplayer.git
         tag: v3.5.5
         commit: 80331fbf774557c45c391741c4058f1cae93ee69
 
