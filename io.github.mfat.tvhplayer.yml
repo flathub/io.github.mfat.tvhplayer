@@ -10,7 +10,7 @@ cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
   env:
-    BASEAPP_REMOVE_WEBENGINE: "1"
+    BASEAPP_REMOVE_WEBENGINE: '1'
 finish-args:
   - --share=network
   - --share=ipc
@@ -38,8 +38,8 @@ modules:
       - --enable-vaapi
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz
-        sha256: 7138d28c96d9d3e3af4ee3d8cad72741f8ffb40da90c1112235dea3ecd3178a3
+        url: https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz
+        sha256: 8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -77,8 +77,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/haasn/libplacebo.git
-        tag: v7.360.1
-        commit: cee9b076f2c63104ccfd497fa79c39a867293ec4
+        tag: v7.387.0
+        commit: 275f7dea27924cdd34ab2e6c20e448b6bc4fab65
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -127,7 +127,8 @@ modules:
       # Its config.guess (2008) predates aarch64; use the SDK's.
       - type: shell
         commands:
-          - cp /usr/share/automake-*/config.guess /usr/share/automake-*/config.sub .auto/
+          - cp /usr/share/automake-*/config.guess /usr/share/automake-*/config.sub
+            .auto/
     config-opts:
       - --enable-shared
       - --disable-static
@@ -169,7 +170,8 @@ modules:
       # Its config.guess (2009) predates aarch64; use the SDK's.
       - type: shell
         commands:
-          - cp /usr/share/automake-*/config.guess /usr/share/automake-*/config.sub .
+          - cp /usr/share/automake-*/config.guess /usr/share/automake-*/config.sub
+            .
 
   # HDHomeRun network tuners, linked into the built-in server.
   - name: libhdhomerun
@@ -238,6 +240,6 @@ modules:
       - install -D -m644 io.github.mfat.tvhplayer.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: "https://github.com/mfat/tvhplayer.git"
+        url: https://github.com/mfat/tvhplayer.git
         tag: v4.1
         commit: 779e7834164428882afad62be10ef337c699e229
