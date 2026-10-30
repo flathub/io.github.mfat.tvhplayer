@@ -64,7 +64,7 @@ modules:
           type: anitya
           project-id: 1560
           stable-only: true
-          url-template: 
+          url-template:
             https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
 
   - name: libplacebo
@@ -121,7 +121,7 @@ modules:
       - '*.la'
     sources:
       - type: archive
-        url: 
+        url:
           https://download.videolan.org/pub/videolan/libdvbcsa/1.1.0/libdvbcsa-1.1.0.tar.gz
         sha256: 4db78af5cdb2641dfb1136fe3531960a477c9e3e3b6ba19a2754d046af3f456d
       # Its config.guess (2009) predates aarch64; use the SDK's.
@@ -174,7 +174,7 @@ modules:
         # Tags let support/version name the build (git describe).
         disable-shallow-clone: true
       - type: archive
-        url: 
+        url:
           https://github.com/tvheadend/dtv-scan-tables/archive/31d6fb8f8b86e204518ada99bfb8cf6807c717e5.tar.gz
         sha256: 279a04925ca4d944f6ae8b187bca01d15044789eea50239a56a53b2d81539ace
         dest: data/dvb-scan
@@ -198,6 +198,6 @@ modules:
       - install -D -m644 io.github.mfat.tvhplayer.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: https://github.com/mfat/tvhplayer.git
-        tag: v4.4.1
-        commit: e6a550e950a99e143a1ebebef53b4f468cce1936
+        url: "https://github.com/mfat/tvhplayer.git"
+        tag: v4.5.0
+        commit: 882fbf25b102c5be4d5b9b7ff6cd83b704500227
