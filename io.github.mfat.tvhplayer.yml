@@ -199,5 +199,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/mfat/tvhplayer.git"
-        tag: v4.5.0
-        commit: 882fbf25b102c5be4d5b9b7ff6cd83b704500227
+        tag: v4.6.0
+        commit: f8efbeafea677fec7267e647336f0ade1651c6b1
