@@ -64,8 +64,7 @@ modules:
           type: anitya
           project-id: 1560
           stable-only: true
-          url-template:
-            https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
+          url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
 
   - name: libplacebo
     buildsystem: meson
@@ -105,8 +104,8 @@ modules:
       - /share/zsh
     sources:
       - type: archive
-        url: https://github.com/mpv-player/mpv/archive/v0.41.0.tar.gz
-        sha256: ee21092a5ee427353392360929dc64645c54479aefdb5babc5cfbb5fad626209
+        url: https://github.com/mpv-player/mpv/archive/v0.42.0.tar.gz
+        sha256: bcfebbfa2b65a6d88dc97ea18117831072373e38b5785a2afb874ed4df5070dd
         x-checker-data:
           type: anitya
           project-id: 5348
@@ -121,8 +120,7 @@ modules:
       - '*.la'
     sources:
       - type: archive
-        url:
-          https://download.videolan.org/pub/videolan/libdvbcsa/1.1.0/libdvbcsa-1.1.0.tar.gz
+        url: https://download.videolan.org/pub/videolan/libdvbcsa/1.1.0/libdvbcsa-1.1.0.tar.gz
         sha256: 4db78af5cdb2641dfb1136fe3531960a477c9e3e3b6ba19a2754d046af3f456d
       # Its config.guess (2009) predates aarch64; use the SDK's.
       - type: shell
@@ -174,8 +172,7 @@ modules:
         # Tags let support/version name the build (git describe).
         disable-shallow-clone: true
       - type: archive
-        url:
-          https://github.com/tvheadend/dtv-scan-tables/archive/31d6fb8f8b86e204518ada99bfb8cf6807c717e5.tar.gz
+        url: https://github.com/tvheadend/dtv-scan-tables/archive/31d6fb8f8b86e204518ada99bfb8cf6807c717e5.tar.gz
         sha256: 279a04925ca4d944f6ae8b187bca01d15044789eea50239a56a53b2d81539ace
         dest: data/dvb-scan
       # Without the stamp, the Makefile empties data/dvb-scan and tries to git clone it.
@@ -198,6 +195,6 @@ modules:
       - install -D -m644 io.github.mfat.tvhplayer.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
-        url: "https://github.com/mfat/tvhplayer.git"
+        url: https://github.com/mfat/tvhplayer.git
         #tag: v4.6.4
         commit: 7d5e0b8889f85baa90198905d44fa48cafbe5c40
