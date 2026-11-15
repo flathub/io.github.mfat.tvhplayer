@@ -170,7 +170,7 @@ modules:
       - type: git
         # TVHplayer's fork; see docs/tvheadend-source.md.
         url: https://github.com/mfat/tvheadend.git
-        commit: 40e88d4cef2c81e44474e75fd2f1edb232575ceb
+        commit: 57610597563a3f49ac1d132c4735cb0bee6d4364
         # Tags let support/version name the build (git describe).
         disable-shallow-clone: true
       - type: archive
@@ -189,6 +189,8 @@ modules:
   - name: tvhplayer
     buildsystem: simple
     build-commands:
+      # The C decoder for HTSP messages, next to the code copied below.
+      - python3 packaging/build-native.py
       - mkdir -p /app/share/tvhplayer/icons
       - cp -r tvhplayer/* /app/share/tvhplayer/
       - cp -r icons/* /app/share/tvhplayer/icons/
@@ -199,5 +201,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/mfat/tvhplayer.git"
-        tag: v4.6.5
-        commit: e6d68e7fce23a1ee19d7c09a26f2581730e12a5a
+        tag: v4.6.6
+        commit: 3e3c7b1b71108dfdbdefa261b6484ca4080d92f8
