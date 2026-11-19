@@ -170,7 +170,7 @@ modules:
       - type: git
         # TVHplayer's fork; see docs/tvheadend-source.md.
         url: https://github.com/mfat/tvheadend.git
-        commit: 21bc3036d986f403b8e7a9ab1662fbd42e0ecfdd
+        commit: f89c949bc40e750773bc6d90f87c8b51c171339a
         # Tags let support/version name the build (git describe).
         disable-shallow-clone: true
       - type: archive
@@ -201,5 +201,5 @@ modules:
     sources:
       - type: git
         url: "https://github.com/mfat/tvhplayer.git"
-        tag: v4.7.5
-        commit: fc2be81cf7b2a39dc584ae0dda9a1afd75a55371
+        tag: v4.7.6
+        commit: 0ae6e76a121203c0464df440d964df3f30a33c14
